@@ -9,5 +9,7 @@ namespace Casino_test.Codes
     internal class DataModel
     {
         public int? Balance { get; set; }
+        public int? Bet { get; set; }
+
     }
 }

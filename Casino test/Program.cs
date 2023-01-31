@@ -23,8 +23,11 @@ Color color;
 
 int outcome = roulette.Spin();
 color = roulette.ColorOutcome(outcome);
-int bet = Convert.ToInt32(Console.ReadLine());
-if (bets.BalanceCheck(bet, model))
+model.Bet = Convert.ToInt32(Console.ReadLine());
+
+
+
+if (bets.BalanceCheck(model.Bet, model))
 {
     Console.WriteLine("JA");
 }
@@ -32,5 +35,6 @@ else
 {
     Console.WriteLine("NO");
 }
+Console.WriteLine(model.Balance);
 //bets.BetRoulette(bet, model);
 Console.WriteLine($"The result is: {outcome} {color.ToString()}");
