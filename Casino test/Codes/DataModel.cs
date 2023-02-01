@@ -10,6 +10,9 @@ namespace Casino_test.Codes
     {
         public int? Balance { get; set; }
         public int? Bet { get; set; }
+        public int? BetAmount { get; set; }
+        public int? Outcome { get; set; }
+        public Color? ColorOutcome { get; set; }
 
     }
 }

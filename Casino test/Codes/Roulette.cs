@@ -15,7 +15,7 @@ namespace Casino_test.Codes
             return nummer;
         }
 
-        public Color ColorOutcome(int input)
+        public Color ColorOutcome(int? input)
         {
             if ((input > 0 && input < 11) || (input > 18 && input < 29))
             {

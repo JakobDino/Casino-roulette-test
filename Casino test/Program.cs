@@ -19,15 +19,17 @@ Bets bets = new();
 DataModel model = new();
 model.Balance = 500;
 
-Color color;
 
-int outcome = roulette.Spin();
-color = roulette.ColorOutcome(outcome);
+
+model.Outcome = roulette.Spin();
 model.Bet = Convert.ToInt32(Console.ReadLine());
+model.BetAmount = Convert.ToInt32(Console.ReadLine());
+model.ColorOutcome = roulette.ColorOutcome(model.Outcome);
+bets.BetRoulette(model);
 
 
 
-if (bets.BalanceCheck(model.Bet, model))
+if (bets.BalanceCheck(model.BetAmount, model))
 {
     Console.WriteLine("JA");
 }
@@ -35,6 +37,6 @@ else
 {
     Console.WriteLine("NO");
 }
-Console.WriteLine(model.Balance);
+Console.WriteLine("Bal: "+model.Balance);
 //bets.BetRoulette(bet, model);
-Console.WriteLine($"The result is: {outcome} {color.ToString()}");
+Console.WriteLine($"The result is: {model.Outcome} {model.ColorOutcome.ToString()}");
