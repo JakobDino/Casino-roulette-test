@@ -13,11 +13,11 @@
 
 
 
-
 Roulette roulette = new();
 Bets bets = new();
 DataModel model = new();
-model.Balance = 500;
+Balance bal = new();
+
 
 
 
@@ -29,7 +29,7 @@ bets.BetRoulette(model);
 
 
 
-if (bets.BalanceCheck(model.BetAmount, model))
+if (bal.BalanceCheck(model))
 {
     Console.WriteLine("JA");
 }
@@ -37,6 +37,6 @@ else
 {
     Console.WriteLine("NO");
 }
-Console.WriteLine("Bal: "+model.Balance);
+Console.WriteLine("Bal: "+bal.GetBalance());
 //bets.BetRoulette(bet, model);
 Console.WriteLine($"The result is: {model.Outcome} {model.ColorOutcome.ToString()}");
