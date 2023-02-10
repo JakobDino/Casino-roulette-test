@@ -24,11 +24,10 @@ namespace Casino_test.Codes
         }
 
 
-        public bool BalanceCheck(DataModel model)
+        public bool BalanceCheck(DataModel model) //property??
         {
             if (model.BetAmount <= balance)
             {
-                balance -= model.BetAmount;
                 return true;
             }
             return false;
