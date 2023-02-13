@@ -10,7 +10,7 @@ namespace Casino_test.Codes
     {
 
 
-        public int BetRoulette(DataModel model)
+        public int BetRoulette(DataModel model, Balance bal)
         {
             //Console.WriteLine("Type 0 for a straight up (specific numbers)\nType 1 for even numbers\nType 2 for odd numbers" +
             // "\nType 3 for red numbers\nType 4 for black numbers\nType 5 for 1st 12\nType 6 for 2nd 12\nType 7 for 3rd 12\nType 8 for 1 to 18\nType 9 for 19 to 36");
@@ -23,7 +23,7 @@ namespace Casino_test.Codes
             {
                 if (model.Bet==model.Outcome)
                 {
-                    Console.WriteLine("you won");
+                    bal.Withdraw(1);
                 }
                 else
                 {
@@ -36,11 +36,11 @@ namespace Casino_test.Codes
                 {
                     if (model.Bet==1)
                     {
-                        Console.WriteLine("you won");
+                        bal.Deposit(1);
                     }
                     else
                     {
-                        Console.WriteLine("you lost");
+                        bal.Withdraw(model.BetAmount);
                     }
                 }
                 else

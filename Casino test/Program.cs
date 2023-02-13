@@ -25,7 +25,7 @@ model.Outcome = roulette.Spin();
 model.Bet = Convert.ToInt32(Console.ReadLine());
 model.BetAmount = Convert.ToInt32(Console.ReadLine());
 model.ColorOutcome = roulette.ColorOutcome(model.Outcome);
-bets.BetRoulette(model);
+bets.BetRoulette(model,bal);
 
 
 
