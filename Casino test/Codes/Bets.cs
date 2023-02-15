@@ -17,7 +17,7 @@ namespace Casino_test.Codes
 
             //if (model.Bet == 1 || model.Bet == 2 || model.Bet == 1 || model.Bet == 1 ||)
             //{
-
+            k
             //}
             if (model.Bet==0)
             {
